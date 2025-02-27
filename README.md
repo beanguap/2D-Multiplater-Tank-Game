@@ -1,50 +1,76 @@
-# React + TypeScript + Vite
+# 🎮 2D Multiplayer Tank Game
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern 2D multiplayer tank game built with React, TypeScript, and CSS using Vite. This project provides a solid foundation for real-time gameplay using WebSockets, featuring a dynamic leaderboard, tank customization options, and an engaging landing page.
 
-Currently, two official plugins are available:
+[![React](https://img.shields.io/badge/React-19.0.0-61DAFB?style=flat&logo=react)](https://reactjs.org/)
+[![TypeScript](https://img.shields.io/badge/TypeScript-5.7.2-3178C6?style=flat&logo=typescript)](https://www.typescriptlang.org/)
+[![Vite](https://img.shields.io/badge/Vite-6.2.0-646CFF?style=flat&logo=vite)](https://vitejs.dev/)
+[![Socket.IO](https://img.shields.io/badge/Socket.IO-4.8.1-010101?style=flat&logo=socket.io)](https://socket.io/)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 📑 Table of Contents
 
-## Expanding the ESLint configuration
+- [Overview](#-overview)
+- [Features](#-features)
+- [Tech Stack](#-tech-stack)
+- [Project Structure](#-project-structure)
+- [Installation](#-installation)
+- [Development](#-development)
+- [Testing](#-testing)
+- [Additional Recommendations](#-additional-recommendations)
+- [Contributing](#-contributing)
+- [License](#-license)
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+## 🔭 Overview
 
-- Configure the top-level `parserOptions` property like this:
+This project serves as a starter template for a 2D multiplayer tank game. It leverages modern web technologies to ensure a fast, scalable, and maintainable codebase. The design focuses on real-time interactions via WebSockets, and provides modules for leaderboards, tank customization, and an attractive landing page.
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+## ✨ Features
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+- **Real-Time Multiplayer:** Powered by WebSocket communication using Socket.IO
+- **Live Leaderboard:** Displays current player rankings dynamically
+- **Tank Customization:** Offers customizable tank features (color, weapons, etc.)
+- **Landing Page:** A user-friendly entry point that highlights game features and navigation
+- **Testing:** Integrated testing with Vitest and Testing Library for a robust development workflow
+- **Responsive UI:** Designed to work across various devices and screen sizes
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+## 🛠 Tech Stack
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+| Category | Technology |
+|----------|------------|
+| **Framework** | [React](https://reactjs.org/) |
+| **Language** | [TypeScript](https://www.typescriptlang.org/) |
+| **Bundler** | [Vite](https://vitejs.dev/) |
+| **Styling** | [Tailwind CSS](https://tailwindcss.com/) |
+| **WebSockets** | [Socket.IO Client](https://socket.io/docs/v4/client-api/) |
+| **Routing** | [React Router](https://reactrouter.com/) |
+| **Testing** | [Vitest](https://vitest.dev/), [@testing-library/react](https://testing-library.com/docs/react-testing-library/intro/) |
+
+## 📂 Project Structure
+
+```plaintext
+my-tank-game/
+├── node_modules/
+├── public/
+│   └── index.html
+├── src/
+│   ├── assets/                # Media files: images, sounds, etc.
+│   ├── components/            # Reusable UI components
+│   │   ├── TankCustomization.tsx
+│   │   ├── Leaderboard.tsx
+│   │   ├── LandingPage.tsx
+│   │   └── GameCanvas.tsx     # Main game rendering (e.g., using canvas, PixiJS, or react-konva)
+│   ├── contexts/              # Context providers (e.g., WebSocket context)
+│   │   └── WebSocketContext.tsx
+│   ├── hooks/                 # Custom hooks (e.g., useWebSocket)
+│   │   └── useWebSocket.ts
+│   ├── services/              # External API and WebSocket service logic
+│   │   └── socketService.ts
+│   ├── styles/                # Global styles and component-specific CSS
+│   │   └── main.css
+│   ├── tests/                 # Vitest test files
+│   │   └── example.test.ts
+│   ├── App.tsx                # Main application component with routing
+│   └── main.tsx               # Entry point for the React application
+├── tsconfig.json
+├── vite.config.ts
+└── package.json
