@@ -22,7 +22,7 @@ A modern 2D multiplayer tank game built with React, TypeScript, and CSS using Vi
 
 ## 🔭 Overview
 
-This project serves as a starter template for a 2D multiplayer tank game. It leverages modern web technologies to ensure a fast, scalable, and maintainable codebase. The design focuses on real-time interactions via WebSockets, and provides modules for leaderboards, tank customization, and an attractive landing page.
+This project serves as a 2D multiplayer tank game. It leverages modern web technologies to ensure a fast, scalable, and maintainable codebase. The design focuses on real-time interactions via WebSockets, and provides modules for leaderboards, tank customization, and an attractive landing page.
 
 ## ✨ Features
 
