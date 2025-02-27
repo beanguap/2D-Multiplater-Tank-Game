@@ -1,0 +1,56 @@
+.landing-page {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #111827; /* bg-gray-900 */
+    color: #ffffff; /* text-white */
+  }
+  
+  .landing-page h1 {
+    font-size: 3rem; /* text-5xl */
+    font-weight: bold;
+    margin-bottom: 1rem; /* mb-4 */
+  }
+  
+  .landing-page .tagline {
+    margin-bottom: 2rem; /* mb-8 */
+    font-size: 1.25rem; /* text-xl */
+  }
+  
+  .button-container {
+    display: flex;
+  }
+  
+  .button {
+    padding: 0.5rem 1rem; /* px-4 py-2 */
+    border-radius: 0.25rem; /* rounded */
+    margin: 0 0.5rem; /* space-x-4 */
+    text-decoration: none;
+    transition: background-color 0.2s;
+  }
+  
+  .play-button {
+    background-color: #3b82f6; /* bg-blue-500 */
+  }
+  
+  .play-button:hover {
+    background-color: #2563eb; /* bg-blue-600 */
+  }
+  
+  .customize-button {
+    background-color: #22c55e; /* bg-green-500 */
+  }
+  
+  .customize-button:hover {
+    background-color: #16a34a; /* bg-green-600 */
+  }
+  
+  .leaderboard-button {
+    background-color: #a855f7; /* bg-purple-500 */
+  }
+  
+  .leaderboard-button:hover {
+    background-color: #9333ea; /* bg-purple-600 */
+  }
