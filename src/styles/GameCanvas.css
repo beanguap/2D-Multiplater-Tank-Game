@@ -1,0 +1,32 @@
+.game-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+  padding: 20px;
+  background-color: #111827;
+  color: white;
+}
+
+.game-canvas {
+  border: 3px solid #3b82f6;
+  background-color: #1f2937;
+  margin: 20px 0;
+}
+
+.connection-status {
+  padding: 8px 16px;
+  border-radius: 4px;
+  background-color: #374151;
+  margin-bottom: 10px;
+}
+
+.game-controls {
+  margin-top: 10px;
+  background-color: rgba(0, 0, 0, 0.3);
+  padding: 10px 20px;
+  border-radius: 4px;
+  max-width: 800px;
+  width: 100%;
+  text-align: center;
+}
