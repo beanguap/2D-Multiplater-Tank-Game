@@ -21,10 +21,3 @@
     color: inherit;
     text-decoration: none;
   }
-  
-  /* Import component styles */
-  @import './LandingPage.css';
-  @import './GameCanvas.css';
-  @import './Leaderboard.css';
-  @import './TankCustomization.css';
-  /* Add other component CSS imports here */

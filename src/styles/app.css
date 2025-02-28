@@ -1,0 +1,22 @@
+/* src/App.css */
+.app-container {
+    text-align: center;
+    padding: 20px;
+  }
+  
+  .nav-links {
+    margin: 20px 0;
+  }
+  
+  .nav-links a {
+    margin: 0 10px;
+    text-decoration: none;
+    padding: 8px 16px;
+    background-color: #4CAF50;
+    color: white;
+    border-radius: 4px;
+  }
+  
+  .nav-links a:hover {
+    background-color: #45a049;
+  }

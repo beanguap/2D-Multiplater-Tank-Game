@@ -40,7 +40,7 @@ This project serves as a 2D multiplayer tank game. It leverages modern web techn
 | **Framework** | [React](https://reactjs.org/) |
 | **Language** | [TypeScript](https://www.typescriptlang.org/) |
 | **Bundler** | [Vite](https://vitejs.dev/) |
-| **Styling** | [Tailwind CSS](https://tailwindcss.com/) |
+| **Styling** | CSS |
 | **WebSockets** | [Socket.IO Client](https://socket.io/docs/v4/client-api/) |
 | **Routing** | [React Router](https://reactrouter.com/) |
 | **Testing** | [Vitest](https://vitest.dev/), [@testing-library/react](https://testing-library.com/docs/react-testing-library/intro/) |
