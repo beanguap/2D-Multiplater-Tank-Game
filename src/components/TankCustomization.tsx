@@ -1,5 +1,5 @@
 // src/components/TankCustomization.tsx
-import './TankCustomization.css';
+import '../styles/TankCustomization.css'; // Correct path
 
 const TankCustomization = () => {
   return (

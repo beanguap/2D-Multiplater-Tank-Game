@@ -1,0 +1,11 @@
+/* src/styles/TankCustomization.css */
+.tank-customization {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background-color: #203a43;
+    color: white;
+    padding: 2rem;
+  }

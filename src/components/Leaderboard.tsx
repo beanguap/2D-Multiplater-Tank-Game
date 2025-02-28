@@ -1,6 +1,5 @@
 // src/components/Leaderboard.tsx
-import React from 'react';
-import './Leaderboard.css';
+import '../styles/Leaderboard.css'; // Correct path
 
 const Leaderboard = () => {
   return (

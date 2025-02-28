@@ -1,6 +1,6 @@
 // src/components/EnhancedLandingPage.tsx
 import { Link } from 'react-router-dom';
-import './LandingPage.css';
+import '../styles/LandingPage.css'; // Correct path
 
 const LandingPage = () => {
   return (

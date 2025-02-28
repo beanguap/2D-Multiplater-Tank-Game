@@ -1,7 +1,7 @@
 // src/components/GameCanvas.tsx
 import { useEffect, useRef, useState } from 'react';
 import { useWebSocketContext } from '../contexts/WebSocketContext';
-import '../styles/gameCanvas.css';
+import '../styles/GameCanvas.css';
 
 // Define game types
 interface Tank {
