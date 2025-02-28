@@ -1,56 +1,65 @@
-.landing-page {
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    background-color: #111827; /* bg-gray-900 */
-    color: #ffffff; /* text-white */
+/* src/components/EnhancedLandingPage.css */
+.enhanced-landing {
+    text-align: center;
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+    color: #fff;
+    overflow: hidden;
   }
   
-  .landing-page h1 {
-    font-size: 3rem; /* text-5xl */
-    font-weight: bold;
-    margin-bottom: 1rem; /* mb-4 */
+  .hero-section {
+    padding: 4rem 1rem;
+    animation: fadeIn 2s ease-in-out;
   }
   
-  .landing-page .tagline {
-    margin-bottom: 2rem; /* mb-8 */
-    font-size: 1.25rem; /* text-xl */
+  .hero-title {
+    font-size: 3rem;
+    margin-bottom: 1rem;
   }
   
-  .button-container {
-    display: flex;
+  .hero-tagline {
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
   }
   
-  .button {
-    padding: 0.5rem 1rem; /* px-4 py-2 */
-    border-radius: 0.25rem; /* rounded */
-    margin: 0 0.5rem; /* space-x-4 */
+  .hero-buttons .btn {
+    display: inline-block;
+    padding: 0.8rem 1.6rem;
+    margin: 0 0.5rem;
     text-decoration: none;
-    transition: background-color 0.2s;
+    border-radius: 4px;
+    transition: transform 0.2s;
   }
   
-  .play-button {
-    background-color: #3b82f6; /* bg-blue-500 */
+  .hero-buttons .play-btn {
+    background-color: #ff6b6b;
   }
   
-  .play-button:hover {
-    background-color: #2563eb; /* bg-blue-600 */
+  .hero-buttons .customize-btn {
+    background-color: #1dd1a1;
   }
   
-  .customize-button {
-    background-color: #22c55e; /* bg-green-500 */
+  .hero-buttons .btn:hover {
+    transform: scale(1.05);
   }
   
-  .customize-button:hover {
-    background-color: #16a34a; /* bg-green-600 */
+  .info-section {
+    padding: 2rem 1rem;
+    background: rgba(0, 0, 0, 0.5);
   }
   
-  .leaderboard-button {
-    background-color: #a855f7; /* bg-purple-500 */
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
   }
   
-  .leaderboard-button:hover {
-    background-color: #9333ea; /* bg-purple-600 */
+  /* Responsive styles */
+  @media (max-width: 768px) {
+    .hero-title {
+      font-size: 2.5rem;
+    }
+    .hero-tagline {
+      font-size: 1.2rem;
+    }
   }
+  

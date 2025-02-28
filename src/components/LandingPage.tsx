@@ -1,21 +1,21 @@
+// src/components/EnhancedLandingPage.tsx
 import { Link } from 'react-router-dom';
-import '../styles/landingPage.css';
+import './LandingPage.css';
 
 const LandingPage = () => {
   return (
-    <div className="landing-page">
-      <h1>2D Multiplayer Tank Game</h1>
-      <p className="tagline">Engage in real-time tank battles!</p>
-      <div className="button-container">
-        <Link to="/game" className="button play-button">
-          Play Game
-        </Link>
-        <Link to="/customize" className="button customize-button">
-          Customize Tank
-        </Link>
-        <Link to="/leaderboard" className="button leaderboard-button">
-          Leaderboard
-        </Link>
+    <div className="enhanced-landing">
+      <div className="hero-section">
+        <h1 className="hero-title">2D Multiplayer Tank Game</h1>
+        <p className="hero-tagline">Engage. Conquer. Dominate the battlefield.</p>
+        <div className="hero-buttons">
+          <Link to="/game" className="btn play-btn">Play Now</Link>
+          <Link to="/customize" className="btn customize-btn">Customize Your Tank</Link>
+        </div>
+      </div>
+      <div className="info-section">
+        <h2>Real-Time Battles</h2>
+        <p>Experience fast-paced, strategic combat in real time with players from around the world.</p>
       </div>
     </div>
   );
