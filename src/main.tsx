@@ -1,6 +1,6 @@
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
-import './styles/main.css' // Fixed import path
+import './styles/main.css'
 import App from './App'
 
 console.log('Mounting React application...');
