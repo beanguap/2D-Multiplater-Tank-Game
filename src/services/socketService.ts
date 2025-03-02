@@ -1,6 +1,7 @@
 import { io, Socket } from 'socket.io-client';
+import { ISocketService, GameState, SocketConfig } from '../types';
 
-class SocketService {
+class SocketService implements ISocketService {
   private socket: Socket | null = null;
   
   init(): void {

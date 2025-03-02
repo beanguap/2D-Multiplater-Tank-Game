@@ -1,6 +1,7 @@
 // src/contexts/WebSocketContext.tsx
 import { createContext, useContext, useEffect, useState } from 'react';
 import { socketService } from '../services/socketService';
+import { WebSocketContextValue, GameState } from '../types';
 
 type WebSocketContextType = {
   connected: boolean;

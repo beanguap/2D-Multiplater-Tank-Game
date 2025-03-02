@@ -2,6 +2,7 @@
 import { useEffect, useRef, useState } from 'react';
 import { useWebSocketContext } from '../contexts/WebSocketContext';
 import '../styles/GameCanvas.css';
+import { Tank, MovementData } from '../types';
 
 // Define game types
 interface Tank {
