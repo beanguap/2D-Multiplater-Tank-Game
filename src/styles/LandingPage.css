@@ -1,12 +1,16 @@
 /* src/components/EnhancedLandingPage.css */
+/* Import Poppins font for modern UI look */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+
 /* Base styles */
 .enhanced-landing {
   text-align: center;
-  font-family: 'Arial', sans-serif;
+  font-family: 'Poppins', sans-serif;
   background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
   color: #fff;
-  min-height: 100vh;
-  overflow-x: hidden;
+  min-height: 100vh; /* Use min-height instead of height */
+  width: 100%;
+  overflow-x: hidden; /* Only restrict horizontal scrolling */
   position: relative;
 }
 
@@ -85,6 +89,7 @@
   transition: transform 0.2s ease-out;
   opacity: 0;
   transform: translateY(40px);
+  min-height: 80vh;
 }
 
 .hero-section.loaded {
@@ -113,11 +118,12 @@
 .hero-title {
   font-size: 4rem;
   margin-bottom: 1rem;
-  font-weight: 900;
+  font-weight: 700;
   letter-spacing: -1px;
   text-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
   position: relative;
   animation: textShadowPulse 4s infinite;
+  font-family: 'Poppins', sans-serif;
 }
 
 .highlight {
@@ -168,6 +174,7 @@
   font-weight: 300;
   opacity: 0;
   animation: fadeIn 1s 0.5s forwards;
+  font-family: 'Poppins', sans-serif;
 }
 
 /* Enhanced Button Styles */
@@ -189,6 +196,7 @@
   font-size: 1.1rem;
   font-weight: 600;
   text-transform: uppercase;
+  font-family: 'Poppins', sans-serif;
   border-radius: 50px;
   cursor: pointer;
   text-decoration: none;
@@ -200,6 +208,7 @@
   color: white;
   background-position: right center;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  border: none;
 }
 
 /* Button Glow Effect on Hover */
@@ -321,6 +330,84 @@
   position: relative;
   width: 200px;
   height: 140px;
+  margin-top: 3rem;
+  opacity: 0;
+  animation: fadeIn 1s 1.5s forwards, tankFloat 5s infinite ease-in-out;
+}
+
+.tank-shadow {
+  position: absolute;
+  bottom: -10px;
+  left: 25%;
+  width: 50%;
+  height: 15px;
+  background: rgba(0, 0, 0, 0.3);
+  border-radius: 50%;
+  animation: shadowPulse 5s infinite ease-in-out;
+}
+
+.tank-body {
+  position: absolute;
+  width: 120px;
+  height: 80px;
+  background: #3b82f6;
+  left: 40px;
+  top: 30px;
+  border-radius: 8px;
+}
+
+.tank-turret {
+  position: absolute;
+  width: 25px;
+  height: 60px;
+  background: #2563eb;
+  top: -30px;
+  left: 48px;
+  border-radius: 5px;
+}
+
+@keyframes tankFloat {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-15px);
+  }
+}
+
+@keyframes shadowPulse {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 0.3;
+  }
+  50% {
+    transform: scale(0.8);
+    opacity: 0.2;
+  }
+}
+
+/* Info sections */
+.info-sections {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  padding: 4rem 2rem;
+  background: rgba(0, 0, 0, 0.2);
+  position: relative;
+  z-index: 1;
+}
+
+.info-section {
+  flex: 1;
+  min-width: 250px;
+  max-width: 350px;
+  padding: 2rem;
+  background: rgba(30, 41, 59, 0.7);
+  border-radius: 12px;
+  border: 1px solid rgba(59, 130, 246, 0.2);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(8px);
   transform: translateY(40px);
   opacity: 0;
   transition: all 0.7s cubic-bezier(0.2, 0.8, 0.2, 1);
@@ -351,6 +438,14 @@
 .info-section h2 {
   margin-bottom: 1rem;
   color: #3b82f6;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+}
+
+.info-section p {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 300;
+  line-height: 1.6;
 }
 
 /* Call to action */
@@ -365,54 +460,47 @@
 .cta-section h2 {
   font-size: 2.5rem;
   margin-bottom: 2rem;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
 }
 
 .cta-btn {
-  display: inline-block;
-  padding: 1rem 2.5rem;
+  background-image: linear-gradient(to right, #3b82f6 0%, #60a5fa 50%, #2563eb 100%);
+  padding: 1.1rem 3rem;
   font-size: 1.2rem;
-  font-weight: 600;
-  background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%);
-  color: white;
-  border-radius: 50px;
-  text-decoration: none;
-  box-shadow: 0 10px 25px rgba(37, 99, 235, 0.4);
-  transition: all 0.3s;
   position: relative;
+  z-index: 1;
+  overflow: visible;
+}
+
+.cta-btn::after {
+  background: #3b82f6;
 }
 
 .cta-btn::before {
   content: '';
   position: absolute;
-  inset: -3px;
-  background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%);
-  border-radius: 53px;
-  z-index: -1;
-  opacity: 0;
-  transition: opacity 0.3s;
+  inset: -4px;
+  border-radius: 55px;
+  background: linear-gradient(
+    45deg,
+    #3b82f6,
+    #60a5fa,
+    #818cf8,
+    #60a5fa,
+    #3b82f6
+  );
+  z-index: -2;
+  animation: borderRotate 4s linear infinite;
+  background-size: 300% 300%;
 }
 
-.cta-btn:hover {
-  transform: translateY(-5px);
-}
-
-.cta-btn:hover::before {
-  opacity: 0.4;
-  animation: pulse 1.5s infinite;
-}
-
-@keyframes pulse {
+@keyframes borderRotate {
   0% {
-    transform: scale(1);
-    opacity: 0.4;
-  }
-  70% {
-    transform: scale(1.05);
-    opacity: 0;
+    background-position: 0% 0%;
   }
   100% {
-    transform: scale(1);
-    opacity: 0;
+    background-position: 150% 150%;
   }
 }
 
@@ -427,7 +515,6 @@
 }
 
 /* Intersection Observer to trigger animations */
-/* This will be handled by JS to add 'visible' class */
 .info-section.visible {
   opacity: 1;
   transform: translateY(0);
@@ -476,3 +563,5 @@
     font-size: 2rem;
   }
 }
+
+

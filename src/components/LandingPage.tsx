@@ -100,20 +100,14 @@ const LandingPage = () => {
   }, []);
   
   return (
-    <div className="retro-landing">
-      {/* Pixelated background overlay */}
-      <div className="pixel-overlay"></div>
-      
+    <div className="enhanced-landing">
       {/* Floating tank shapes background */}
       <div className="bg-shapes">
-        <div className="pixelated shape shape-1"></div>
-        <div className="pixelated shape shape-2"></div>
-        <div className="pixelated shape shape-3"></div>
-        <div className="pixelated shape shape-4"></div>
+        <div className="shape shape-1"></div>
+        <div className="shape shape-2"></div>
+        <div className="shape shape-3"></div>
+        <div className="shape shape-4"></div>
       </div>
-      
-      {/* Scanlines effect */}
-      <div className="scanlines"></div>
       
       {/* Hero Section */}
       <div 
@@ -124,24 +118,24 @@ const LandingPage = () => {
         }}
       >
         <div className="hero-content">
-          <h1 className="hero-title pixel-text">2D Multiplayer <span className="highlight">Tank Game</span></h1>
-          <p className="hero-tagline pixel-text-small">Engage. Conquer. Dominate the battlefield.</p>
+          <h1 className="hero-title">2D Multiplayer <span className="highlight">Tank Game</span></h1>
+          <p className="hero-tagline">Engage. Conquer. Dominate the battlefield.</p>
           
           <div className="hero-buttons">
-            <Link to="/game" className="pixel-btn play-btn">
+            <Link to="/game" className="btn play-btn">
               <span className="btn-text">Play Now</span>
               <span className="btn-icon">▶</span>
             </Link>
-            <Link to="/customize" className="pixel-btn customize-btn">
+            <Link to="/customize" className="btn customize-btn">
               <span className="btn-text">Customize Your Tank</span>
               <span className="btn-icon">⚙️</span>
             </Link>
           </div>
         </div>
         
-        <div className="tank-preview pixelated">
+        <div className="tank-preview">
           <div className="tank-shadow"></div>
-          <div className="tank-body pixel-border">
+          <div className="tank-body">
             <div className="tank-turret"></div>
           </div>
         </div>
@@ -149,29 +143,29 @@ const LandingPage = () => {
       
       {/* Info Sections with animated reveals */}
       <div className="info-sections">
-        <div className="info-section reveal-section pixel-border">
+        <div className="info-section reveal-section">
           <div className="info-icon">🔥</div>
-          <h2 className="pixel-text-medium">Real-Time Battles</h2>
-          <p className="pixel-text-small">Experience fast-paced, strategic combat in real time with players from around the world.</p>
+          <h2>Real-Time Battles</h2>
+          <p>Experience fast-paced, strategic combat in real time with players from around the world.</p>
         </div>
         
-        <div className="info-section reveal-section pixel-border">
+        <div className="info-section reveal-section">
           <div className="info-icon">🏆</div>
-          <h2 className="pixel-text-medium">Competitive Leaderboard</h2>
-          <p className="pixel-text-small">Climb the ranks and prove your tactical superiority against global competition.</p>
+          <h2>Competitive Leaderboard</h2>
+          <p>Climb the ranks and prove your tactical superiority against global competition.</p>
         </div>
         
-        <div className="info-section reveal-section pixel-border">
+        <div className="info-section reveal-section">
           <div className="info-icon">🛠️</div>
-          <h2 className="pixel-text-medium">Customize Your Arsenal</h2>
-          <p className="pixel-text-small">Design your perfect battle machine with extensive customization options.</p>
+          <h2>Customize Your Arsenal</h2>
+          <p>Design your perfect battle machine with extensive customization options.</p>
         </div>
       </div>
       
       {/* Call to action */}
       <div className="cta-section">
-        <h2 className="pixel-text-medium">Ready for Battle?</h2>
-        <Link to="/game" className="pixel-btn cta-btn blink-animation">
+        <h2>Ready for Battle?</h2>
+        <Link to="/game" className="btn cta-btn">
           Enter the Battlefield
         </Link>
       </div>
